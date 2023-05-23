@@ -20,7 +20,7 @@ up to 10 events that match search parameters.
 
 ## Wireframe:
 
-<img src="./world-history.png" width="400" height="600">
+<img src="./world-history.png" width="500" height="600">
 
 ## Components:
 
@@ -30,4 +30,4 @@ There are three components on the app:
 3. EventsTable: contains all historical events results.
 4. EventBox: displays one historical event.
 
-<img src="./world-history-components.png" width="400" height="600">
+<img src="./world-history-components.png" width="500" height="600">
