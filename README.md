@@ -22,10 +22,12 @@ up to 10 events that match search parameters.
 
 <img src="./world-history.png" width="200" height="300">
 
-### components:
+## Components:
 
 There are three components on the app:  
 1. EventsTable: contains the entire app.
 2. SearchBar: received user input.
-3. EventTable: contains all historical events results.
+3. EventsTable: contains all historical events results.
 4. EventBox: displays one historical event.
+
+<img src="./world-history-components.png width="200" height="300">
