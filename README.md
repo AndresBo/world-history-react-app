@@ -34,6 +34,6 @@ There are four components on the app:
 
 Components hierarchy: 
 1. EventsTable: contains the entire app.
-1. SearchBar: received user input.
-2. EventsTable: contains all historical events results
-1. EventBox: displays one historical event.
+  1. SearchBar: received user input.
+  2. EventsTable: contains all historical events results
+    1. EventBox: displays one historical event.
