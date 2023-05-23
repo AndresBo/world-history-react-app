@@ -32,8 +32,10 @@ There are four components on the app:
 
 <img src="./world-history-components.png" width="500" height="600">
 
+
 Components hierarchy: 
-1. EventsTable: contains the entire app.
-  1. SearchBar: received user input.
-  2. EventsTable: contains all historical events results
-    1. EventBox: displays one historical event.
+
+1. EventsTable: contains the entire app
+    1. SearchBar: received user input
+    2. EventsTable: contains all historical events results
+        1. EventBox: displays one historical event
