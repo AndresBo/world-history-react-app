@@ -11,13 +11,14 @@ up to 10 events that match search parameters.
 
 [
   {
-    "year": "1974",
-    "month": "01",
-    "day": "02",
-    "event": "United States President Richard Nixon signs a bill lowering the maximum U.S. speed limit to 55 MPH in order to conserve gasoline during an OPEC embargo."
+    "year": "1974",  
+    "month": "01",  
+    "day": "02",  
+    "event": "United States President Richard Nixon signs a bill lowering the maximum U.S. speed limit to 55 MPH in order to conserve gasoline during an OPEC embargo."  
   }
 ]
 
 ### wireframe:
 
-image.png
+![Wireframe](./world-history.png)
+
