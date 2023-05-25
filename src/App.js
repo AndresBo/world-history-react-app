@@ -13,7 +13,7 @@ function SearchBar({ events, setEvents }) {
       <h1>World History Events</h1>
       <label>Event search: 
         {" "}
-        <input type="text" onChange={handleInputChange}/>
+        <input type="text" value={events} onChange={handleInputChange}/>
       </label> 
     </form> 
   )
