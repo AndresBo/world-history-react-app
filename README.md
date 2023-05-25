@@ -25,17 +25,17 @@ up to 10 events that match search parameters.
 ## Components:
 
 There are four components on the app:  
-1. EventsApp: contains the entire app.
-2. SearchBar: received user input.
-3. EventsTable: contains all historical events results.
-4. EventBox: displays one historical event.
+1. **EventsApp**: contains the entire app.
+2. **SearchBar**: received user input.
+3. **EventsTable**: contains all historical events results.
+4. **EventBox**: displays one historical event.
 
 <img src="./world-history-components.png" width="500" height="600">
 
 
 Components hierarchy: 
 
-1. EventsApp: contains the entire app
-    1. SearchBar: received user input
-    2. EventsTable: contains all historical events results
-        1. EventBox: displays one historical event
+1. **EventsApp**: contains the entire app
+    1. **SearchBar**: received user input
+    2. **EventsTable**: contains all historical events results
+        1. **EventBox**: displays one historical event
