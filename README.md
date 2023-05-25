@@ -25,7 +25,7 @@ up to 10 events that match search parameters.
 ## Components:
 
 There are four components on the app:  
-1. EventsTable: contains the entire app.
+1. EventsApp: contains the entire app.
 2. SearchBar: received user input.
 3. EventsTable: contains all historical events results.
 4. EventBox: displays one historical event.
@@ -35,7 +35,7 @@ There are four components on the app:
 
 Components hierarchy: 
 
-1. EventsTable: contains the entire app
+1. EventsApp: contains the entire app
     1. SearchBar: received user input
     2. EventsTable: contains all historical events results
         1. EventBox: displays one historical event

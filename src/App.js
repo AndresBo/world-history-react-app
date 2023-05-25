@@ -1,14 +1,19 @@
 import './App.css';
 
+// first child component:
 function SearchBar() {
   return (
     <form>
-      <h1>World History Events</h1>
+      <label>World History Events</label>
       <input type="text" placeholder="Search..." />
     </form>
   )
 }
 
+// second child component:
+
+
+// root component:
 function EventsTable({ events }) {
   return (
     <div>
@@ -32,6 +37,7 @@ const EVENTS =
   {"year": "55", "month": "02", "day": "11", "event": "The death under mysterious circumstances of Tiberius Claudius Caesar Britannicus, heir to the Roman empire, on the eve of his coming of age clears the way for Nero to become Emperor."}
 ];
 
+// root component:
 export default function App() {
   return <EventsTable events={EVENTS} />
 };
