@@ -9,7 +9,7 @@ function SearchBar({ events, setEvents }) {
   }
 
   return (
-    <form>
+    <form onSubmit={e => e.preventDefault()}>
       <h1>World History Events</h1>
       <label>Event search: 
         {" "}
