@@ -4,17 +4,35 @@ import './App.css';
 function SearchBar() {
   return (
     <form>
-      <label>World History Events</label>
-      <input type="text" placeholder="Search..." />
-    </form>
+      <h1>World History Events</h1>
+      <label>Event search: 
+        {" "}
+        <input type="text"/>
+      </label> 
+    </form> 
   )
 }
 
 // second child component:
+function EventsTable({ events }) {
+  return (
+    events.map(event => <EventBox event={event}/>)
+  )
+}
+
+// first child component of EventsTable:
+function EventBox( {event} ) {
+  return (
+    <section>
+      <p>{event.day}/{event.month}/{event.year}</p>
+      <p>{event.event}</p>
+    </section>
+  )
+}
 
 
 // root component:
-function EventsTable({ events }) {
+function EventsApp({ events }) {
   return (
     <div>
       <SearchBar />
@@ -39,5 +57,5 @@ const EVENTS =
 
 // root component:
 export default function App() {
-  return <EventsTable events={EVENTS} />
+  return <EventsApp events={EVENTS} />
 };
