@@ -1,13 +1,19 @@
+import { useState } from 'react';
 import './App.css';
 
 // first child component:
-function SearchBar() {
+function SearchBar({ events, setEvents }) {
+
+  function handleInputChange(e) {
+    setEvents(e.target.value)
+  }
+
   return (
     <form>
       <h1>World History Events</h1>
       <label>Event search: 
         {" "}
-        <input type="text"/>
+        <input type="text" onChange={handleInputChange}/>
       </label> 
     </form> 
   )
@@ -21,7 +27,7 @@ function EventsTable({ events }) {
 }
 
 // first child component of EventsTable:
-function EventBox( {event} ) {
+function EventBox({ event }) {
   return (
     <section>
       <p>{event.day}/{event.month}/{event.year}</p>
@@ -32,16 +38,18 @@ function EventBox( {event} ) {
 
 
 // root component:
-function EventsApp({ events }) {
+function EventsApp({eventos}) {
+  const [events, setEvents] = useState(" ")
+  
   return (
     <div>
-      <SearchBar />
-      <EventsTable events={events}/>
+      <SearchBar events={events} setEvents={setEvents} />
+      <EventsTable events={eventos}/>
     </div>
   );
 }
 
-const EVENTS = 
+const EVENTOS = 
 [
   {"year": "-45", "month": "01", "day": "01", "event": "The Julian calendar takes effect as the civil calendar of the Roman Empire, establishing January 1 as the new date of the new year."},
   {"year": "366", "month": "01", "day": "02", "event": "The Alemanni cross the frozen Rhine in large numbers, invading the Roman Empire."},
@@ -57,5 +65,5 @@ const EVENTS =
 
 // root component:
 export default function App() {
-  return <EventsApp events={EVENTS} />
+  return <EventsApp eventos={EVENTOS} />
 };
