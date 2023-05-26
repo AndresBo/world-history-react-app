@@ -16,13 +16,14 @@ function App() {
     fetch(API_URL + query, {headers: {"X-Api-Key": API_KEY}})
     .then(response => {return response.json()})
     .then(data => {setEvent(data)})
+    .catch(error => console.log(error))
   }
 
   return (
     <div className="App">
+      <h1>World History Events</h1>
       <input type="text" onChange={handleInputChange}></input>
       <button onClick={fetchEventData}>Search</button>
-      
     </div>
   );
 }
