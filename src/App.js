@@ -5,12 +5,14 @@ function App() {
   const [event, setEvent] = useState([]);
   const [query, setQuery] = useState("");
 
+  const API_URL = "https://api.api-ninjas.com/v1/historicalevents?text=";
+
   const handleInputChange = (e) => {
     setQuery(e.target.value);
   }
 
   const fetchEventData = () => {
-    fetch(`https://api.api-ninjas.com/v1/historicalevents?text=${query}`, {headers: {"X-Api-Key": "SymaCCHQRJ8PQzoD9RpclA==BLj9oqEyCrR6EkD5"}})
+    fetch(API_URL + query, {headers: {"X-Api-Key": "SymaCCHQRJ8PQzoD9RpclA==BLj9oqEyCrR6EkD5"}})
     .then(response => {return response.json()})
     .then(data => {setEvent(data)})
   }
