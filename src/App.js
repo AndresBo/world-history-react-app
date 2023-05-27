@@ -24,8 +24,30 @@ function App() {
       <h1>World History Events</h1>
       <input type="text" onChange={handleInputChange}></input>
       <button onClick={fetchEventData}>Search</button>
+      <EventsTable event={event}/>
     </div>
   );
+}
+
+function EventsTable({ event }) {
+  if(event) {
+    return (
+    event.map( (individualEvent) => (
+      <EventBox key={individualEvent.event} event={individualEvent}/>))
+  )}
+  else {
+    return (
+    <p>No events were found! please try again</p>
+  )}
+}
+
+function EventBox( {event} ) {
+  return (
+    <section>
+      <p>{event.day}/{event.month}/{event.year}</p>
+      <p>{event.event}</p>
+    </section>
+  )
 }
 
 export default App;
