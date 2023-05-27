@@ -30,15 +30,12 @@ function App() {
 }
 
 function EventsTable({ event }) {
-  if(event) {
+  if (event.length >= 1) {
     return (
     event.map( (individualEvent) => (
       <EventBox key={individualEvent.event} event={individualEvent}/>))
   )}
-  else {
-    return (
-    <p>No events were found! please try again</p>
-  )}
+  
 }
 
 function EventBox( {event} ) {
