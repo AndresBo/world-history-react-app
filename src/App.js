@@ -28,7 +28,8 @@ function App() {
       <h1>World History Events</h1>
       <input type="text" onChange={handleInputChange}></input>
       <button onClick={fetchEventData} disabled={isLoading}>Search</button>
-      <EventsTable event={event}/>
+      {isLoading ? <LoadingSpinner /> : <EventsTable event={event}/>}
+      
     </div>
   );
 }
@@ -50,5 +51,15 @@ function EventBox( {event} ) {
     </section>
   )
 }
+
+function LoadingSpinner() {
+  return (
+    <div className="spinner-container">
+      <div className="loading-spinner"></div>
+    </div>
+  )
+}
+
+
 
 export default App;
