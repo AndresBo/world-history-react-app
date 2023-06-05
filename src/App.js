@@ -9,10 +9,12 @@ function App() {
   const API_URL = "https://api.api-ninjas.com/v1/historicalevents?text=";
   const API_KEY = "SymaCCHQRJ8PQzoD9RpclA==BLj9oqEyCrR6EkD5";
 
+  // handle text box change by setting query state
   const handleInputChange = (e) => {
     setQuery(e.target.value);
   }
 
+  // handle fetch event after search button is clicked
   const fetchEventData = () => {
     setIsLoading(true);
     fetch(API_URL + query, {headers: {"X-Api-Key": API_KEY}})
@@ -23,6 +25,7 @@ function App() {
                       setIsLoading(false);})
   }
 
+  // root react component:
   return (
     <div className="App">
       <h1>World History Events</h1>
@@ -34,6 +37,7 @@ function App() {
   );
 }
 
+// react component for all events, child of App component:
 function EventsTable({ event }) {
   if (event.length >= 1) {
     return (
@@ -43,6 +47,7 @@ function EventsTable({ event }) {
   
 }
 
+// react component for an individual event, child of EventsTable
 function EventBox( {event} ) {
   return (
     <section className="card">
@@ -52,6 +57,7 @@ function EventBox( {event} ) {
   )
 }
 
+// react component to contain loading-spinner:
 function LoadingSpinner() {
   return (
     <div className="spinner-container">
