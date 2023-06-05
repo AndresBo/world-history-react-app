@@ -4,6 +4,7 @@ import './App.css';
 function App() {
   const [event, setEvent] = useState([]);
   const [query, setQuery] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const API_URL = "https://api.api-ninjas.com/v1/historicalevents?text=";
   const API_KEY = "SymaCCHQRJ8PQzoD9RpclA==BLj9oqEyCrR6EkD5";
@@ -13,17 +14,20 @@ function App() {
   }
 
   const fetchEventData = () => {
+    setIsLoading(true);
     fetch(API_URL + query, {headers: {"X-Api-Key": API_KEY}})
     .then(response => {return response.json()})
-    .then(data => {setEvent(data)})
-    .catch(error => console.log(error))
+    .then(data => {setEvent(data);
+                   setIsLoading(false);})
+    .catch(error => {console.log(error);
+                      setIsLoading(false);})
   }
 
   return (
     <div className="App">
       <h1>World History Events</h1>
       <input type="text" onChange={handleInputChange}></input>
-      <button onClick={fetchEventData}>Search</button>
+      <button onClick={fetchEventData} disabled={isLoading}>Search</button>
       <EventsTable event={event}/>
     </div>
   );
