@@ -27,7 +27,7 @@ up to 10 events that match search parameters.
 
 There are three components on the app:  
 1. **EventsApp**: contains the entire app.
--  **SearchBar**: received user input. -**no longer a separate component, during development it was designed as part of roo App component**
+-  **SearchBar**: received user input. -**no longer a separate component, during development it was designed as part of the root App component**
 2. **EventsTable**: contains all historical events results.
 3. **EventBox**: displays one historical event.
 
@@ -37,6 +37,6 @@ There are three components on the app:
 Components hierarchy: 
 
 1. **EventsApp**: contains the entire app
-    1. **SearchBar**: received user input -**no longer a separate component, during development it was designed as part of roo App component**
+    1. **SearchBar**: received user input -**no longer a separate component, during development it was designed as part of the root App component**
     2. **EventsTable**: contains all historical events results
         1. **EventBox**: displays one historical event
