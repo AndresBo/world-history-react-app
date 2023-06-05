@@ -40,9 +40,9 @@ function EventsTable({ event }) {
 
 function EventBox( {event} ) {
   return (
-    <section>
-      <p>{event.day}/{event.month}/{event.year}</p>
-      <p>{event.event}</p>
+    <section className="card">
+      <h3>{event.day}/{event.month}/{event.year}</h3>
+      <p  className="event-text">{event.event}</p>
     </section>
   )
 }
