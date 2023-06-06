@@ -3,7 +3,7 @@
 
 Allows users to search for world history events. Returns up to 10 cards with the event and the date.
 
-Check it live [here](world-history-events.netlify.app).
+Check it live [here](https://world-history-events.netlify.app/).
 
 ## Data:
 Data will be sourced from [Historical Events API](https://api-ninjas.com/api/historicalevents). It returns 
