@@ -1,7 +1,7 @@
 
 # World History Events React app
 
-Allows users to search for world history events. 
+Allows users to search for world history events. Returns up to 10 cards with the event and the date.
 
 ## Data:
 Data will be sourced from [Historical Events API](https://api-ninjas.com/api/historicalevents). It returns 
@@ -11,10 +11,22 @@ up to 10 events that match search parameters.
 ```
 [
   {
-    "year": "1974",  
-    "month": "01",  
-    "day": "02",  
-    "event": "United States President Richard Nixon signs a bill lowering the maximum U.S. speed limit to 55 MPH in order to conserve gasoline during an OPEC embargo."  
+    "year": "1964",
+    "month": "01",
+    "day": "09",
+    "event": "Martyrs' Day: Several Panamanian youths try to raise the Panamanian flag in the U.S.-controlled Panama Canal Zone, leading to fighting between U.S. military and Panamanian civilians."
+  },
+  {
+    "year": "1855",
+    "month": "01",
+    "day": "28",
+    "event": "A locomotive on the Panama Canal Railway runs from the Atlantic Ocean to the Pacific Ocean for the first time."
+  },
+  {
+    "year": "1904",
+    "month": "05",
+    "day": "04",
+    "event": "The United States begins construction of the Panama Canal."
   }
 ]
 ```
