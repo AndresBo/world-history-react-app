@@ -1,6 +1,6 @@
 
 # World History Events React app
-
+:)
 Allows users to search for world history events. Returns up to 10 cards with the event and the date.
 
 ## Data:
